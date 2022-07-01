@@ -1,6 +1,7 @@
 package com.proyectos.ClinicaOdontologica.repository;
 
-import com.dh.clase36.integradora.entities.Address;
+
+import com.proyectos.ClinicaOdontologica.entities.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
