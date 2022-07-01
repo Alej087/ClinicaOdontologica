@@ -27,7 +27,7 @@ public class DentistController {
         return dentistService.createDentist(dentist);
     }
 
-    @GetMapping
+    @PutMapping
     public Dentist update(@RequestBody Dentist dentist){
     return dentistService.updateDentist(dentist);
     }

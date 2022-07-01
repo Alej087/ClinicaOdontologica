@@ -1,0 +1,18 @@
+@import url(./skeleton.css);
+
+.banner-menu {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-image: url(/img/Bannerppal.jpg);
+}
+
+.banner-menu h1 {
+    color: aliceblue;
+}
+
+.login-button {
+    background-color: aqua;
+}
