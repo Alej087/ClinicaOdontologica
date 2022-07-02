@@ -2,6 +2,7 @@ package com.proyectos.ClinicaOdontologica.services;
 
 
 import com.proyectos.ClinicaOdontologica.entities.Patient;
+import com.proyectos.ClinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.proyectos.ClinicaOdontologica.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,8 +44,13 @@ public class PatientService {
         return repository.findById(id);
     }
 
-    public void deletePatient(Long id) {
-
-        repository.deleteById(id);
+    public void deletePatient(Long id) throws ResourceNotFoundException {
+        Optional<Patient> patientSearched = searchPatientById(id);
+        if(patientSearched.isPresent()) {
+            repository.deleteById(id);
+        }
+        else {
+            throw new ResourceNotFoundException("The patient with id = "+id+" not exist.Enter a right id");
+        }
     }
 }

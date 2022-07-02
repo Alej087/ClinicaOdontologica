@@ -4,6 +4,7 @@ package com.proyectos.ClinicaOdontologica.controller;
 import com.proyectos.ClinicaOdontologica.entities.Appointment;
 import com.proyectos.ClinicaOdontologica.entities.Dentist;
 import com.proyectos.ClinicaOdontologica.entities.Patient;
+import com.proyectos.ClinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.proyectos.ClinicaOdontologica.services.AppointmentService;
 import com.proyectos.ClinicaOdontologica.services.DentistService;
 import com.proyectos.ClinicaOdontologica.services.PatientService;
@@ -63,12 +64,8 @@ public class AppointmentController {
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable Long id){
-        String resp= "Error id entered is wrong";
-        if(appointmentService.searchAppointmetById(id).isPresent()){
-            appointmentService.deleteAppointment(id);
-            resp="The appointment with id="+id+" was eliminates";
-        }
-        return resp;
+    public ResponseEntity<String> delete(@PathVariable Long id) throws ResourceNotFoundException {
+        appointmentService.deleteAppointment(id);
+        return ResponseEntity.ok("The appointment was eliminated correctly");
     }
 }

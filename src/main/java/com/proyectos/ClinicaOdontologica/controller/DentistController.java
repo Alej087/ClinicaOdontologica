@@ -1,6 +1,7 @@
 package com.proyectos.ClinicaOdontologica.controller;
 
 import com.proyectos.ClinicaOdontologica.entities.Dentist;
+import com.proyectos.ClinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.proyectos.ClinicaOdontologica.services.DentistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -43,12 +44,8 @@ public class DentistController {
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable Long id){
-        String resp= "Error id entered is wrong";
-        if(dentistService.searchDentistById(id).isPresent()){
-            dentistService.deleteDentist(id);
-            resp= "The dentist with the id="+id+" was eliminated";
-        }
-        return resp;
+    public ResponseEntity<String> delete(@PathVariable Long id) throws ResourceNotFoundException {
+        dentistService.deleteDentist(id);
+        return ResponseEntity.ok("The dentist was eliminated correctly");
     }
 }

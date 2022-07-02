@@ -8,7 +8,8 @@ import java.time.LocalDate;
 public class Appointment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "appointment_sequence", sequenceName = "appointment_sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "appointment_sequence")
     private Long id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "patient_id", nullable = false)

@@ -1,8 +1,10 @@
 package com.proyectos.ClinicaOdontologica.services;
 
 import com.proyectos.ClinicaOdontologica.entities.Appointment;
+import com.proyectos.ClinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.proyectos.ClinicaOdontologica.repository.AppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,8 +25,14 @@ public class AppointmentService {
         return repository.findAll();
     }
 
-    public void deleteAppointment(Long id){
-        repository.deleteById(id);
+    public void deleteAppointment(Long id) throws ResourceNotFoundException{
+        Optional<Appointment> appointmentSearched = searchAppointmetById(id);
+        if(appointmentSearched.isPresent()) {
+            repository.deleteById(id);
+        }
+        else {
+            throw new ResourceNotFoundException("The appointment with id = "+id+" not exist.Enter a right id");
+        }
     }
 
     public Optional<Appointment> searchAppointmetById(Long id){
