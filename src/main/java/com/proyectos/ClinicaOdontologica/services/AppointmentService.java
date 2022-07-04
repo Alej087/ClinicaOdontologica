@@ -1,6 +1,7 @@
 package com.proyectos.ClinicaOdontologica.services;
 
 import com.proyectos.ClinicaOdontologica.entities.Appointment;
+import com.proyectos.ClinicaOdontologica.exceptions.BadRequestException;
 import com.proyectos.ClinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.proyectos.ClinicaOdontologica.repository.AppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,10 @@ public class AppointmentService {
     @Autowired
     AppointmentRepository repository;
 
-    public Appointment createAppointment(Appointment appointment){
-
+    public Appointment createAppointment(Appointment appointment) throws BadRequestException {
+        if(appointment.getPatient() == null || appointment.getDentist() == null){
+            throw new BadRequestException("The appointment can not be created because the patient or the dentist does not exist");
+        }
         return repository.save(appointment);
     }
     public List<Appointment> appointmentList(){

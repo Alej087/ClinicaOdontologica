@@ -4,6 +4,7 @@ package com.proyectos.ClinicaOdontologica.controller;
 import com.proyectos.ClinicaOdontologica.entities.Appointment;
 import com.proyectos.ClinicaOdontologica.entities.Dentist;
 import com.proyectos.ClinicaOdontologica.entities.Patient;
+import com.proyectos.ClinicaOdontologica.exceptions.BadRequestException;
 import com.proyectos.ClinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.proyectos.ClinicaOdontologica.services.AppointmentService;
 import com.proyectos.ClinicaOdontologica.services.DentistService;
@@ -17,7 +18,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/turnos")
+@RequestMapping("/appointments")
 public class AppointmentController {
 
     @Autowired
@@ -29,17 +30,9 @@ public class AppointmentController {
 
 
     @PostMapping
-    public ResponseEntity<Appointment> create(@RequestBody Appointment appointment){
-        ResponseEntity<Appointment> response;
-        Optional<Patient> patient = patientService.searchPatientById(appointment.getPatient().getId());
-        Optional<Dentist> dentist = dentistService.searchDentistById(appointment.getDentist().getId());
-        if(patient.isPresent()&&dentist.isPresent()){
-            response=ResponseEntity.ok(appointmentService.createAppointment(appointment));
-        }
-        else{
-            response=ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-        return response;
+    public ResponseEntity<String> create(@RequestBody Appointment appointment) throws BadRequestException {
+        appointmentService.createAppointment(appointment);
+        return ResponseEntity.ok("Appointment created");
     }
 
     @GetMapping
@@ -67,5 +60,10 @@ public class AppointmentController {
     public ResponseEntity<String> delete(@PathVariable Long id) throws ResourceNotFoundException {
         appointmentService.deleteAppointment(id);
         return ResponseEntity.ok("The appointment was eliminated correctly");
+    }
+
+    @ExceptionHandler({BadRequestException.class})
+    public ResponseEntity<String> processErrorBadRequest(BadRequestException ex){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 }
