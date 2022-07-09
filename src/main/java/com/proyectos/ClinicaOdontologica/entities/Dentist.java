@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+
 @Entity
 @Table(name = "Dentists")
 public class Dentist {
@@ -25,6 +26,12 @@ public class Dentist {
     private Set<Appointment> appointments = new HashSet<>();
 
     public Dentist() {
+    }
+
+    public Dentist(String lastName, String name, String cardId) {
+        this.lastName = lastName;
+        this.name = name;
+        this.cardId = cardId;
     }
 
     public Long getId() {

@@ -37,6 +37,15 @@ public class Patient {
     public Patient() {
     }
 
+    public Patient(String lastName, String name, String email, int dni, LocalDate startDate, Address address) {
+        this.lastName = lastName;
+        this.name = name;
+        this.email = email;
+        this.dni = dni;
+        this.startDate = startDate;
+        this.address = address;
+    }
+
     public Long getId() {
         return id;
     }

@@ -23,7 +23,7 @@ public class AppUserService implements UserDetailsService {
             return userSearched.get();
         }
         else {
-         throw new UsernameNotFoundException("Email's user not found");
+         throw new UsernameNotFoundException("User email not found");
         }
     }
 }

@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    /*@GetMapping("/")
+    @GetMapping("/")
     public ResponseEntity<String> home(){
         return ResponseEntity.ok("<h1>Welcome to White Teeth</h1>");
-    }*/
+    }
 }

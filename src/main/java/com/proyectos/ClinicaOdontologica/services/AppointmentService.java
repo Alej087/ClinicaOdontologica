@@ -5,7 +5,6 @@ import com.proyectos.ClinicaOdontologica.exceptions.BadRequestException;
 import com.proyectos.ClinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.proyectos.ClinicaOdontologica.repository.AppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

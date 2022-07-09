@@ -25,6 +25,12 @@ public class Appointment {
     public Appointment() {
     }
 
+    public Appointment(Patient patient, Dentist dentist, LocalDate date) {
+        this.patient = patient;
+        this.dentist = dentist;
+        this.date = date;
+    }
+
     public Long getId() {
         return id;
     }

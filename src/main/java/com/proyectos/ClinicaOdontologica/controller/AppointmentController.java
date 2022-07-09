@@ -2,8 +2,6 @@ package com.proyectos.ClinicaOdontologica.controller;
 
 
 import com.proyectos.ClinicaOdontologica.entities.Appointment;
-import com.proyectos.ClinicaOdontologica.entities.Dentist;
-import com.proyectos.ClinicaOdontologica.entities.Patient;
 import com.proyectos.ClinicaOdontologica.exceptions.BadRequestException;
 import com.proyectos.ClinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.proyectos.ClinicaOdontologica.services.AppointmentService;
@@ -15,7 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/appointments")

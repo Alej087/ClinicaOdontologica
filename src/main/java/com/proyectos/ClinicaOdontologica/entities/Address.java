@@ -27,6 +27,13 @@ public class Address {
     public Address() {
     }
 
+    public Address(String street, Integer number, String country, String city) {
+        this.street = street;
+        this.number = number;
+        this.country = country;
+        this.city = city;
+    }
+
     public Long getId() {
         return id;
     }
