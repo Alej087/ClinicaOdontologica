@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+
+
 @Service
 public class PatientService {
 
@@ -17,7 +19,6 @@ public class PatientService {
     private PatientRepository repository;
 
     public List<Patient> patientList() {
-
         return repository.findAll();
     }
     /*public Paciente buscarPacientePorEmail(String email) {
@@ -26,7 +27,6 @@ public class PatientService {
     }*/
 
     public Patient createPatient(Patient patient) {
-
         return repository.save(patient);
     }
 
