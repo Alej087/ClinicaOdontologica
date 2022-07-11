@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/dentists")
+@RequestMapping("v1/dentists")
 public class DentistController {
 
     @Autowired

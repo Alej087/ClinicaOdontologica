@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/patients")
+@RequestMapping("v1/patients")
 public class PatientController {
 
     private static final Logger logger = Logger.getLogger(PatientController.class);
@@ -39,7 +39,7 @@ public class PatientController {
 
     @PostMapping
     public Patient create(@RequestBody Patient patient){
-        logger.info("The patient "+ patient + " was created.");
+        logger.info("The patient "+ patient.getName()+ " was created.");
         return patientService.createPatient(patient);
     }
 
