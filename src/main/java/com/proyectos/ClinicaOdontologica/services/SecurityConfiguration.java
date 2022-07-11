@@ -26,7 +26,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .disable()
                 .authorizeRequests()
                 .antMatchers("/views/appointments**").access("hasRole('USER') or hasRole('ADMIN')")
-                .antMatchers("/","/index**","/views/patients**","/views/dentists**","/patients**").access("hasRole('ADMIN')")
+                .antMatchers("/","/index**","/views/patients**","/views/dentists**").access("hasRole('ADMIN')")
                 .antMatchers("/v1/**")
                 .permitAll()
                 .anyRequest().authenticated()

@@ -33,7 +33,7 @@ public class PatientController {
 
     @GetMapping
     public List<Patient> listAll(){
-        logger.info("This are the patients in our base: ");
+        logger.info("This is the list of patients in our base");
         return patientService.patientList();
     }
 
@@ -45,7 +45,7 @@ public class PatientController {
 
     @PutMapping
     public Patient update(@RequestBody Patient patient){
-        logger.info("The patient " + patient + " was updated.");
+        logger.info("The patient " + patient.getName() + " was updated.");
         return patientService.updatePatient(patient);
     }
 
@@ -54,8 +54,10 @@ public class PatientController {
         if(patientService.searchPatientById(id).isPresent()){
             return ResponseEntity.ok(patientService.searchPatientById(id).get());
         }
-        logger.error("The patient with id: " + id + " is not found.");
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        else {
+            logger.error("The patient with id: " + id + " is not found.");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 
     @DeleteMapping("/{id}")
