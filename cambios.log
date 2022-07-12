@@ -66,3 +66,54 @@
 [2022-07-10 22:23:16] [ INFO ] [PatientController:42] The patient Alejandro was created.
 [2022-07-10 22:23:16] [ INFO ] [PatientController:42] The patient Alejandro was created.
 [2022-07-10 22:23:19] [ INFO ] [PatientController:36] This is the list of patients in our base
+[2022-07-11 14:24:30] [ INFO ] [PatientController:42] The patient Alejandro was created.
+[2022-07-11 14:24:46] [ INFO ] [DentistController:31] The dentist Alejandro was created.
+[2022-07-11 14:24:57] [ INFO ] [PatientController:42] The patient Alejandro was created.
+[2022-07-11 14:25:42] [ INFO ] [PatientController:36] This is the list of patients in our base
+[2022-07-11 14:26:51] [ INFO ] [AppointmentController:35] The appointment for 2022-10-09 was created.
+[2022-07-11 14:28:52] [ INFO ] [AppointmentController:35] The appointment for 2022-10-09 was created.
+[2022-07-11 14:29:19] [ INFO ] [AppointmentController:35] The appointment for null was created.
+[2022-07-11 14:29:57] [ INFO ] [AppointmentController:35] The appointment for null was created.
+[2022-07-11 14:30:40] [ INFO ] [AppointmentController:65] The appointment with id 3 was eliminated.
+[2022-07-11 14:31:06] [ INFO ] [AppointmentController:65] The appointment with id 2 was eliminated.
+[2022-07-11 14:31:22] [ INFO ] [AppointmentController:35] The appointment for null was created.
+[2022-07-11 14:31:33] [ INFO ] [PatientController:36] This is the list of patients in our base
+[2022-07-11 14:31:55] [ ERROR] [AppointmentController:57] The appointment with id: 2 is not found.
+[2022-07-11 14:32:02] [ ERROR] [AppointmentController:57] The appointment with id: 3 is not found.
+[2022-07-11 14:32:10] [ INFO ] [AppointmentController:35] The appointment for null was created.
+[2022-07-11 14:32:16] [ INFO ] [AppointmentController:35] The appointment for null was created.
+[2022-07-11 14:32:38] [ INFO ] [AppointmentController:35] The appointment for 2022-05-07 was created.
+[2022-07-11 14:34:36] [ INFO ] [AppointmentController:47] The appointment was updated.
+[2022-07-11 14:35:02] [ ERROR] [AppointmentController:57] The appointment with id: 2 is not found.
+[2022-07-11 14:35:23] [ INFO ] [AppointmentController:47] The appointment was updated.
+[2022-07-11 14:35:29] [ INFO ] [AppointmentController:47] The appointment was updated.
+[2022-07-11 14:35:53] [ INFO ] [PatientController:48] The patient Aledro was updated.
+[2022-07-11 14:36:14] [ INFO ] [PatientController:48] The patient Aledro was updated.
+[2022-07-11 14:36:26] [ INFO ] [AppointmentController:35] The appointment for 2022-05-07 was created.
+[2022-07-11 14:39:59] [ INFO ] [AppointmentController:35] The appointment for 2022-05-07 was created.
+[2022-07-11 19:16:08] [ INFO ] [PatientController:42] The patient Alejandro was created.
+[2022-07-11 19:16:11] [ INFO ] [DentistController:31] The dentist Alejandro was created.
+[2022-07-11 19:16:31] [ ERROR] [AppointmentController:57] The appointment with id: 1 is not found.
+[2022-07-11 19:17:13] [ INFO ] [PatientController:42] The patient Alejandro was created.
+[2022-07-11 19:17:16] [ INFO ] [DentistController:31] The dentist Alejandro was created.
+[2022-07-11 19:17:49] [ INFO ] [PatientController:42] The patient Alejandro was created.
+[2022-07-11 19:17:52] [ INFO ] [DentistController:31] The dentist Alejandro was created.
+[2022-07-11 19:18:14] [ INFO ] [AppointmentController:35] The appointment for 2022-05-07 was created.
+[2022-07-11 19:18:45] [ INFO ] [PatientController:42] The patient Alejandro was created.
+[2022-07-11 19:18:47] [ INFO ] [DentistController:31] The dentist Alejandro was created.
+[2022-07-11 19:18:50] [ INFO ] [AppointmentController:35] The appointment for 2022-05-07 was created.
+[2022-07-11 19:19:46] [ INFO ] [PatientController:42] The patient Alejandro was created.
+[2022-07-11 19:19:51] [ INFO ] [DentistController:31] The dentist Alejandro was created.
+[2022-07-11 19:19:58] [ INFO ] [AppointmentController:35] The appointment for 2022-05-07 was created.
+[2022-07-11 19:21:37] [ INFO ] [PatientController:42] The patient Alejandro was created.
+[2022-07-11 19:21:42] [ INFO ] [DentistController:31] The dentist Alejandro was created.
+[2022-07-11 19:21:46] [ INFO ] [AppointmentController:35] The appointment for 2022-05-07 was created.
+[2022-07-11 19:22:27] [ INFO ] [PatientController:42] The patient Alejandro was created.
+[2022-07-11 19:22:30] [ INFO ] [DentistController:31] The dentist Alejandro was created.
+[2022-07-11 19:22:33] [ INFO ] [AppointmentController:35] The appointment for 2022-05-07 was created.
+[2022-07-11 19:23:27] [ INFO ] [PatientController:42] The patient Alejandro was created.
+[2022-07-11 19:23:29] [ INFO ] [DentistController:31] The dentist Alejandro was created.
+[2022-07-11 19:23:31] [ INFO ] [AppointmentController:35] The appointment for 2022-05-07 was created.
+[2022-07-11 19:24:48] [ INFO ] [PatientController:42] The patient Alejandro was created.
+[2022-07-11 19:24:51] [ INFO ] [DentistController:31] The dentist Alejandro was created.
+[2022-07-11 19:24:53] [ INFO ] [AppointmentController:35] The appointment for 2022-05-07 was created.

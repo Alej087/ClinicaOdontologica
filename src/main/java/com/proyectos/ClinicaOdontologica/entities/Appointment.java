@@ -11,11 +11,11 @@ public class Appointment {
     @SequenceGenerator(name = "appointment_sequence", sequenceName = "appointment_sequence")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "appointment_sequence")
     private Long id;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "dentist_id", nullable = false)
     private Dentist dentist;
 

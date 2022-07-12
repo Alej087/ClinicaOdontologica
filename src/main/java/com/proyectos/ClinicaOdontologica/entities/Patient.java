@@ -26,12 +26,12 @@ public class Patient {
     @Column
     private LocalDate startDate;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     private Address address;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "patient", fetch = FetchType.EAGER)
     private Set<Appointment> appointments = new HashSet<>();
 
     public Patient() {

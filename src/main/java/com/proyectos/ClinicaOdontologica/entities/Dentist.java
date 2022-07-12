@@ -22,7 +22,7 @@ public class Dentist {
     @Column
     private String cardId;
     @JsonIgnore
-    @OneToMany(mappedBy = "dentist" ,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "dentist" ,fetch = FetchType.EAGER)
     private Set<Appointment> appointments = new HashSet<>();
 
     public Dentist() {
